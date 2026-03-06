@@ -1,0 +1,11 @@
+{
+  "scaler_g": {
+    "type": "StandardScaler",
+    "features": "gfeat7(7)"
+  },
+  "scaler_r": {
+    "type": "StandardScaler",
+    "features": "rdesc10(10)"
+  },
+  "sklearn_version": "1.6.1"
+}

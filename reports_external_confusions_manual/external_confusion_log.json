@@ -1,0 +1,180 @@
+{
+  "root": "/content/drive/MyDrive/Chemoinfo_QT",
+  "outdir": "/content/drive/MyDrive/Chemoinfo_QT/reports_external_confusions_manual",
+  "device": "cpu",
+  "batch_size": 256,
+  "thr_fixed": 0.5455,
+  "alpha_m2_family": 0.59,
+  "alpha_m4_family": 0.5,
+  "alpha_m2_cvpr": 0.4377795192720573,
+  "alpha_m4_cvpr": 0.5622204807279426,
+  "m2_dir": "/content/drive/MyDrive/Chemoinfo_QT/results_ens_trans_gatv2_scaffold5fold",
+  "m4_dir": "/content/drive/MyDrive/Chemoinfo_QT/results_lco5_trans_gat_ens_posaug_advanced",
+  "bestthr_ranking": 0.6471420526504517,
+  "bestthr_external_bestF1": 0.7355,
+  "external_counts": {
+    "N": 3999,
+    "Pos": 592,
+    "Neg": 3407
+  },
+  "alpha_family_logs": {
+    "M2": {
+      "estimated": true,
+      "method": "min_MSE_to_internal_prediction",
+      "target_col": "p_M2",
+      "map_sample": 2500,
+      "alpha": 0.59,
+      "weights_found": {
+        "transformer": 5,
+        "gatv2": 5
+      }
+    },
+    "M4": {
+      "estimated": true,
+      "method": "min_MSE_to_internal_prediction",
+      "target_col": "p_M4",
+      "map_sample": 2500,
+      "alpha": 0.5,
+      "weights_found": {
+        "transformer": 5,
+        "gatv2": 5
+      }
+    }
+  },
+  "load_logs": {
+    "M2": {
+      "result_dir": "/content/drive/MyDrive/Chemoinfo_QT/results_ens_trans_gatv2_scaffold5fold",
+      "transformer_logs_head": [
+        {
+          "weight_path": "/content/drive/MyDrive/Chemoinfo_QT/results_ens_trans_gatv2_scaffold5fold/transformer_fold0.pt",
+          "strict_loaded": true,
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "unloaded_keys": []
+        },
+        {
+          "weight_path": "/content/drive/MyDrive/Chemoinfo_QT/results_ens_trans_gatv2_scaffold5fold/transformer_fold1.pt",
+          "strict_loaded": true,
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "unloaded_keys": []
+        }
+      ],
+      "gatv2_logs_head": [
+        {
+          "weight_path": "/content/drive/MyDrive/Chemoinfo_QT/results_ens_trans_gatv2_scaffold5fold/gatv2_fold0.pt",
+          "strict_loaded": true,
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "unloaded_keys": []
+        },
+        {
+          "weight_path": "/content/drive/MyDrive/Chemoinfo_QT/results_ens_trans_gatv2_scaffold5fold/gatv2_fold1.pt",
+          "strict_loaded": true,
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "unloaded_keys": []
+        }
+      ],
+      "num_transformer_weights": 5,
+      "num_gatv2_weights": 5
+    },
+    "M4": {
+      "result_dir": "/content/drive/MyDrive/Chemoinfo_QT/results_lco5_trans_gat_ens_posaug_advanced",
+      "transformer_logs_head": [
+        {
+          "weight_path": "/content/drive/MyDrive/Chemoinfo_QT/results_lco5_trans_gat_ens_posaug_advanced/butina_t0.7_transformer_fold0.pt",
+          "strict_loaded": true,
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "unloaded_keys": []
+        },
+        {
+          "weight_path": "/content/drive/MyDrive/Chemoinfo_QT/results_lco5_trans_gat_ens_posaug_advanced/butina_t0.7_transformer_fold1.pt",
+          "strict_loaded": true,
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "unloaded_keys": []
+        }
+      ],
+      "gatv2_logs_head": [
+        {
+          "weight_path": "/content/drive/MyDrive/Chemoinfo_QT/results_lco5_trans_gat_ens_posaug_advanced/butina_t0.7_gatv2_fold0.pt",
+          "strict_loaded": false,
+          "missing_keys": [
+            "c1.att",
+            "c1.bias",
+            "c1.lin_l.weight",
+            "c1.lin_l.bias",
+            "c1.lin_r.weight",
+            "c1.lin_r.bias",
+            "c1.lin_edge.weight",
+            "c2.att",
+            "c2.bias",
+            "c2.lin_l.weight",
+            "c2.lin_l.bias",
+            "c2.lin_r.weight",
+            "c2.lin_r.bias",
+            "c2.lin_edge.weight"
+          ],
+          "unexpected_keys": [],
+          "unloaded_keys": [
+            "g1.att",
+            "g1.bias",
+            "g1.lin_l.weight",
+            "g1.lin_l.bias",
+            "g1.lin_r.weight",
+            "g1.lin_r.bias",
+            "g1.lin_edge.weight",
+            "g2.att",
+            "g2.bias",
+            "g2.lin_l.weight",
+            "g2.lin_l.bias",
+            "g2.lin_r.weight",
+            "g2.lin_r.bias",
+            "g2.lin_edge.weight"
+          ]
+        },
+        {
+          "weight_path": "/content/drive/MyDrive/Chemoinfo_QT/results_lco5_trans_gat_ens_posaug_advanced/butina_t0.7_gatv2_fold1.pt",
+          "strict_loaded": false,
+          "missing_keys": [
+            "c1.att",
+            "c1.bias",
+            "c1.lin_l.weight",
+            "c1.lin_l.bias",
+            "c1.lin_r.weight",
+            "c1.lin_r.bias",
+            "c1.lin_edge.weight",
+            "c2.att",
+            "c2.bias",
+            "c2.lin_l.weight",
+            "c2.lin_l.bias",
+            "c2.lin_r.weight",
+            "c2.lin_r.bias",
+            "c2.lin_edge.weight"
+          ],
+          "unexpected_keys": [],
+          "unloaded_keys": [
+            "g1.att",
+            "g1.bias",
+            "g1.lin_l.weight",
+            "g1.lin_l.bias",
+            "g1.lin_r.weight",
+            "g1.lin_r.bias",
+            "g1.lin_edge.weight",
+            "g2.att",
+            "g2.bias",
+            "g2.lin_l.weight",
+            "g2.lin_l.bias",
+            "g2.lin_r.weight",
+            "g2.lin_r.bias",
+            "g2.lin_edge.weight"
+          ]
+        }
+      ],
+      "num_transformer_weights": 5,
+      "num_gatv2_weights": 5
+    }
+  }
+}

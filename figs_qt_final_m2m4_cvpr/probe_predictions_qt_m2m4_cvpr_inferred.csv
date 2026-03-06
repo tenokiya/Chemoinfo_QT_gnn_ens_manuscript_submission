@@ -1,0 +1,9 @@
+drug,query,SMILES_probe,p_ens,pred_bin@thr,y_true
+Dofetilide,dofetilide,CN(CCC1=CC=C(C=C1)NS(=O)(=O)C)CCOC2=CC=C(C=C2)NS(=O)(=O)C,0.6250837,1,1.0
+Quinidine,quinidine,COC1=CC2=C(C=CN=C2C=C1)[C@@H]([C@H]3C[C@@H]4CCN3C[C@@H]4C=C)O,0.69182,1,1.0
+"d,l-Sotalol",sotalol,CC(C)NCC(C1=CC=C(C=C1)NS(=O)(=O)C)O,0.58814186,1,1.0
+Diltiazem,diltiazem,CC(=O)O[C@@H]1[C@@H](SC2=CC=CC=C2N(C1=O)CCN(C)C)C3=CC=C(C=C3)OC,0.4976099,0,0.0
+Mexiletine,mexiletine,CC1=C(C(=CC=C1)C)OCC(C)N,0.44787395,0,1.0
+Ranolazine,ranolazine,CC1=C(C(=CC=C1)C)NC(=O)CN2CCN(CC2)CC(COC3=CC=CC=C3OC)O,0.46975034,0,1.0
+Verapamil,verapamil,CC(C)C(CCCN(C)CCC1=CC(=C(C=C1)OC)OC)(C#N)C2=CC(=C(C=C2)OC)OC,0.6353985,1,1.0
+Bepridil,bepridil,CC(C)COCC(CN(CC1=CC=CC=C1)C2=CC=CC=C2)N3CCCC3,0.7016116976737976,1,
