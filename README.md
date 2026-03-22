@@ -116,3 +116,42 @@ A simplified overview is shown below.
 ├── figs_m2m4_cvpr_roc/
 ├── figs_qt_final_m2m4_cvpr/
 └── figs_shap_pdp_QT-M2M4_cvpr/
+
+## Software requirements
+
+### Tested environment
+- Python: 3.10.12
+
+### Core Python packages
+- numpy
+- pandas
+- scikit-learn
+- matplotlib
+- rdkit
+- torch
+- torch-geometric
+- jupyter
+
+## Installation
+Create a clean Python environment and install the required packages:
+pip install -r requirements.txt
+
+## How to use this repository
+Open the main notebook and run the workflow step by step:
+jupyter notebook qt_liability_gnn_workflow.ipynb
+
+## Datasets and redistribution
+This repository contains processed datasets and source-derived files used in the manuscript.
+Some original data sources may have their own redistribution policies.
+Details of dataset curation and provenance are described in the manuscript and supplementary methods.
+
+## Training, testing, and external evaluation
+This repository includes outputs for internal validation and external evaluation.
+Relevant files and directories include:
+- reports_internal_QT-M2M4-cvpr/
+- reports_external_confusions_manual/
+- reports_triage_external_fixed/
+
+## Intended use
+This repository is intended for research and reproducibility purposes only.
+It is not intended for clinical decision-making.
