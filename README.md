@@ -27,11 +27,6 @@ This repository contains the following major resources:
 - `qt_liability_gnn_workflow.ipynb`  
   Main Jupyter notebook containing the workflow used for data preparation, model training, evaluation, and manuscript output generation.
 
-> **Recommended improvement before final resubmission:**  
-> Rename this file to a descriptive name such as  
-> `qt_liability_gnn_workflow.ipynb`  
-> and update this README accordingly.
-
 ### 2. Input and processed datasets
 Examples of included data files:
 - `AID_1671200_datatable.csv`
@@ -116,6 +111,7 @@ A simplified overview is shown below.
 ├── figs_m2m4_cvpr_roc/
 ├── figs_qt_final_m2m4_cvpr/
 └── figs_shap_pdp_QT-M2M4_cvpr/
+```
 
 ## Software requirements
 
