@@ -78,7 +78,7 @@ A simplified overview is shown below.
 
 ```text
 .
-├── Untitled0_fix_EN.ipynb
+├── qt_liability_gnn_workflow.ipynb
 ├── AID_1671200_datatable.csv
 ├── AID_588834_datatable.csv
 ├── merged_for_model_consolidated.csv
@@ -134,7 +134,7 @@ pip install -r requirements.txt
 Open the main notebook and run the workflow step by step:
 
 ```bash
-jupyter notebook Untitled0_fix_EN.ipynb
+jupyter notebook qt_liability_gnn_workflow.ipynb
 ```
 
 The notebook contains the main procedures for:
