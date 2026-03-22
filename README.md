@@ -24,7 +24,7 @@ This repository is intended to support the manuscript submission and revision pr
 This repository contains the following major resources:
 
 ### 1. Source workflow
-- `Untitled0_final.ipynb`  
+- `qt_liability_gnn_workflow.ipynb`  
   Main Jupyter notebook containing the workflow used for data preparation, model training, evaluation, and manuscript output generation.
 
 > **Recommended improvement before final resubmission:**  
@@ -96,7 +96,7 @@ A simplified overview is shown below.
 
 ```text
 .
-├── Untitled0_final.ipynb
+├── qt_liability_gnn_workflow.ipynb
 ├── AID_1671200_datatable.csv
 ├── AID_1671200_labeled.csv
 ├── AID_588834_datatable.csv
