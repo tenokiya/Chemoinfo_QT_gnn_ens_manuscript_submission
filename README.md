@@ -22,7 +22,7 @@ This repository supports the manuscript submission and revision process for the 
 ## What is included in this repository
 
 ### 1. Main workflow notebook
-- `Untitled0_fix_EN.ipynb`  
+- `qt_liability_gnn_workflow.ipynb`  
   Main Jupyter notebook containing the workflow used for data preparation, model training, evaluation, and manuscript-related output generation.
 
 ### 2. Key tabular datasets
