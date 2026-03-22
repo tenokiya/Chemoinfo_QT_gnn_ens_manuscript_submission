@@ -1,0 +1,25 @@
+# Core scientific Python stack
+numpy>=1.23
+pandas>=1.5
+scipy>=1.10
+scikit-learn>=1.2
+joblib>=1.2
+matplotlib>=3.7
+Pillow>=9.5
+requests>=2.31
+pubchempy>=1.0.4
+
+# Cheminformatics
+rdkit>=2022.9.5
+
+# Deep learning / graph neural networks
+torch>=2.1
+torch-geometric>=2.4
+captum>=0.7
+
+# Interpretation / visualization / dimensionality reduction
+shap>=0.44
+umap-learn>=0.5.5
+
+# Notebook environment
+jupyter>=1.0
