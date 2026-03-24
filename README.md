@@ -242,6 +242,10 @@ The revised submission distinguishes the following dataset roles:
 - **Original external dataset**: derived from PubChem BioAssay **AID 588834** using the same parent-structure and graph-construction logic.
 - **Strict external subset**: a compound-disjoint subset of the original external dataset created by excluding compounds overlapping the internal dataset by **CID or canonical SMILES**.
 
+The FAERS-derived signal-positive component of the internal development dataset was generated in a study-specific pharmacovigilance workflow implemented in **R** on a locally assembled FAERS database, using adverse-event signal screening based on reporting-odds-ratio analysis. Because this step reflects project-specific database construction and signal-query settings, the repository documents the downstream merge, formatting, and application steps explicitly rather than presenting this curation step as a generic one-command reconstruction.
+
+In the command-line helper, this curated FAERS-derived positive component is supplied to the `merge-internal` task as the auxiliary positive input via `--aux_positive_csv aux_positive_table.csv`.
+
 Details of dataset curation, label definition, parent-structure consolidation, redistribution context, and strict external subset construction are described in the manuscript and supplementary methods.
 
 ---
@@ -425,6 +429,8 @@ Representative outputs:
 - `merged_for_model_with_label.csv`
 - `merged_for_model_consolidated.csv`
 - `merged_for_model_audit.json`
+
+Practical note. In the revised manuscript package, the auxiliary positive input corresponds to the study-ready FAERS-derived signal-positive component generated in the project-specific R-based pharmacovigilance workflow described above. The helper script documents how that curated input is merged and propagated into the model-ready internal tables.
 
 ### 3) Convert the consolidated internal table into a graph-index CSV
 
