@@ -339,6 +339,50 @@ A public interactive demonstration is available separately via Hugging Face Spac
 
 This GitHub repository serves a different role: it provides the manuscript-linked reproducibility resources, including workflow code, processed datasets, trained weights, revision scripts, and representative strict external outputs.
 
+
+## Apply QT-M2M4 to your own compounds
+
+A lightweight public demo is available on Hugging Face Spaces. For local inference with the repository files, use `predict_qt_liability.py`.
+
+### Input format
+Prepare a CSV with a SMILES column. The script auto-detects common column names such as `SMILES`, `smiles`, and `SMILES_ISO`. An optional identifier column can be provided using names such as `compound_id`, `id`, `name`, or `drug`.
+
+Example input:
+
+```csv
+compound_id,SMILES
+Ajmaline,CC[C@H]1[C@@H]2C[C@H]3[C@H]4[C@@]5(C[C@@H]([C@H]2[C@H]5O)N3[C@@H]1O)C6=CC=CC=C6N4C
+Azimilide,CN1CCN(CC1)CCCCN2C(=O)CN(C2=O)/N=C/C3=CC=C(O3)C4=CC=C(C=C4)Cl
+```
+
+### Command line
+
+```bash
+python predict_qt_liability.py \
+  --input example_smiles.csv \
+  --output example_predictions.csv \
+  --root .
+```
+
+### Output columns
+- `compound_id`: compound identifier
+- `smiles_input`: SMILES supplied by the user
+- `smiles_canonical`: RDKit-canonicalized SMILES used for graph construction
+- `valid_rdkit`: whether the compound was successfully parsed by RDKit
+- `p_m2`: probability from the M2 family
+- `p_m4`: probability from the M4 family
+- `p_ens`: final QT-M2M4 ensemble probability
+- `binary_call_055`: binary decision using the manuscript threshold of 0.55
+- `triage_label`: `GREEN`, `YELLOW`, or `RED` using default thresholds of 0.44 and 0.75
+- `note`: parsing or graph-construction note, if applicable
+
+### Thresholds
+By default, the script uses the manuscript thresholds:
+- binary threshold: `0.55`
+- GREEN boundary: `0.44`
+- RED boundary: `0.75`
+
+These can be overridden from the command line when needed.
 ---
 
 ## Citation
