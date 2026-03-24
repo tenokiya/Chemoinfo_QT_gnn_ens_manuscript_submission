@@ -1,0 +1,6 @@
+compound_id,SMILES
+Ajmaline,CC[C@H]1[C@@H]2C[C@H]3[C@H]4[C@@]5(C[C@@H]([C@H]2[C@H]5O)N3[C@@H]1O)C6=CC=CC=C6N4C
+Azimilide,CN1CCN(CC1)CCCCN2C(=O)CN(C2=O)/N=C/C3=CC=C(O3)C4=CC=C(C=C4)Cl
+Dofetilide,CN(CCC1=CC=C(C=C1)NS(=O)(=O)C)CCOC2=CC=C(C=C2)NS(=O)(=O)C
+Diltiazem,CC(=O)O[C@@H]1[C@@H](SC2=CC=CC=C2N(C1=O)CCN(C)C)C3=CC=C(C=C3)OC
+Nifedipine,CC1=C(C(C(=C(N1)C)C(=O)OC)C2=CC=CC=C2[N+](=O)[O-])C(=O)OC
