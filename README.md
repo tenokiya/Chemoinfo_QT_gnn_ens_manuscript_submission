@@ -43,7 +43,7 @@ For the revised manuscript, the reported strict external performance of QT-M2M4 
 
 ```bash
 pip install -r requirements.txt
-jupyter notebook qt_liability_gnn_workflow.ipynb
+jupyter notebook qt_liability_gnn_workflow_v2_clean.ipynb
 ```
 
 Use this notebook to inspect the main workflow for dataset preparation, graph construction, model training, internal evaluation, and manuscript-related output generation.
@@ -76,7 +76,7 @@ These scripts were prepared to support the revised European Journal of Medicinal
 
 ### 1. Main workflow notebook
 
-- `qt_liability_gnn_workflow.ipynb`  
+- `qt_liability_gnn_workflow_v2_clean.ipynb`  
   Main Jupyter notebook for data preparation, graph construction, model training, evaluation, and manuscript-related outputs.
 
 ### 2. Key tabular datasets
@@ -153,7 +153,7 @@ A simplified overview is shown below.
 
 ```text
 .
-├── qt_liability_gnn_workflow.ipynb
+├── qt_liability_gnn_workflow_v2_clean.ipynb
 ├── comment5_split_similarity_analysis.py
 ├── strict_external_eval_full_thr055_fig2layout.py
 ├── triage_external_strict_sim_fixed_thresholds.py
@@ -240,7 +240,7 @@ Details of dataset curation, label definition, parent-structure consolidation, r
 Open:
 
 ```bash
-jupyter notebook qt_liability_gnn_workflow.ipynb
+jupyter notebook qt_liability_gnn_workflow_v2_clean.ipynb
 ```
 
 This notebook contains the main procedures for:
@@ -329,7 +329,7 @@ These thresholds are intended as **screening-oriented operating boundaries**, no
 
 The repository contents can be interpreted as follows.
 
-- `qt_liability_gnn_workflow.ipynb`  
+- `qt_liability_gnn_workflow_v2_clean.ipynb`  
   Main notebook-based workflow for dataset preparation, model development, and representative manuscript analyses.
 
 - `reports_internal_QT-M2M4-cvpr/`  
