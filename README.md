@@ -385,6 +385,105 @@ By default, the script uses the manuscript thresholds:
 These can be overridden from the command line when needed.
 ---
 
+## Regenerating model-ready dataset files from public-source assay tables
+
+The repository already includes the canonical processed files used for the manuscript (`merged_for_model_with_label.csv`, `merged_for_model_consolidated.csv`, `data_graph_with_smiles_index.csv`, `data_graph_with_smiles.pt`, `data_graph_external_index.csv`, and `data_graph_external.pt`).
+
+For transparency, the repository also includes `prepare_model_ready_datasets.py`, which exposes the main dataset-formatting steps as command-line tasks.
+
+### 1) Create labeled AID 1671200 internal assay tables
+
+This step converts the raw PubChem AID 1671200 table into labeled AID-only tables, including the mixed AID table used before auxiliary positives are merged in.
+
+```bash
+python prepare_model_ready_datasets.py label-aid1671200 \
+  --input AID_1671200_datatable.csv \
+  --outdir .
+```
+
+Representative outputs:
+- `AID_1671200_labeled.csv`
+- `AID_1671200_labeled_QC.csv`
+- `AID_1671200_labeled_QC_noPAINS.csv`
+- `AID_1671200_labeled_MIX_POSstrict_NEGbase.csv`
+- `AID_1671200_label_audit.json`
+
+### 2) Merge the AID-only internal table with an auxiliary positive table
+
+The manuscript internal development table combines the AID-derived set with an auxiliary positive table. The helper script accepts an auxiliary CSV that contains at least a SMILES-like column and, when available, CID / signal / source columns.
+
+```bash
+python prepare_model_ready_datasets.py merge-internal \
+  --aid_mix AID_1671200_labeled_MIX_POSstrict_NEGbase.csv \
+  --aux_positive_csv aux_positive_table.csv \
+  --outdir .
+```
+
+Representative outputs:
+- `aid_minimal.csv`
+- `aux_positive_minimal.csv`
+- `merged_for_model_with_label.csv`
+- `merged_for_model_consolidated.csv`
+- `merged_for_model_audit.json`
+
+### 3) Convert the consolidated internal table into a graph-index CSV
+
+This step creates the model-ready internal graph index used by the training / evaluation workflow. Optional SMILES augmentation for positives is exposed through `--pos_aug`.
+
+```bash
+python prepare_model_ready_datasets.py build-graph-index \
+  --input merged_for_model_consolidated.csv \
+  --output_index data_graph_with_smiles_index.csv
+```
+
+To also write a PyTorch Geometric object list:
+
+```bash
+python prepare_model_ready_datasets.py build-graph-index \
+  --input merged_for_model_consolidated.csv \
+  --output_index data_graph_with_smiles_index.csv \
+  --write_pt data_graph_with_smiles.pt \
+  --root .
+```
+
+### 4) Convert the raw PubChem AID 588834 table into the original external graph-index files
+
+```bash
+python prepare_model_ready_datasets.py build-external \
+  --input AID_588834_datatable.csv \
+  --outdir .
+```
+
+Representative outputs:
+- `AID_588834_labeled.csv`
+- `data_graph_external_index.csv`
+- `AID_588834_label_audit.json`
+
+To also write the external PyTorch Geometric object list:
+
+```bash
+python prepare_model_ready_datasets.py build-external \
+  --input AID_588834_datatable.csv \
+  --outdir . \
+  --write_pt data_graph_external.pt \
+  --root .
+```
+
+### 5) Build the strict compound-disjoint external subset used in the revised manuscript
+
+After the original external graph-index file is available, the revised strict-external evaluation pipeline can be run with:
+
+```bash
+python strict_external_eval_full_thr055_fig2layout.py
+```
+
+This script constructs the strict external subset by excluding compounds that overlap the internal dataset at the CID or canonical-SMILES level, then evaluates the model families and the final QT-M2M4 ensemble on that strict subset.
+
+### Practical note
+
+The command-line helper is provided to make the data-formatting steps more explicit for readers. The deposited processed files remain the canonical review assets for the manuscript package.
+
+
 ## Citation
 
 Associated manuscript currently under revision at the **European Journal of Medicinal Chemistry**.
