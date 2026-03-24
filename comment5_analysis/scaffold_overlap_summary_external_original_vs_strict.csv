@@ -1,0 +1,3 @@
+analysis_set,n_external_unique_scaffolds,n_scaffolds_seen_in_internal,n_scaffolds_novel_vs_internal,pct_scaffolds_novel_vs_internal
+external_original,1563,962,601,38.45169545745362
+external_strict,921,337,584,63.40933767643865

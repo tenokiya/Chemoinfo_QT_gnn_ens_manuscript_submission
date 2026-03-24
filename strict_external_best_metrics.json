@@ -1,0 +1,25 @@
+{
+  "best_mode": "cv_pr",
+  "best_combo": "M2+M4",
+  "n_strict_external_valid": 1683,
+  "StrictExternal_ROC": 0.7964385017676553,
+  "StrictExternal_PR": 0.5080625784633366,
+  "StrictExternal_F1_at_0.55": 0.5363128491620112,
+  "StrictExternal_fixed_decision_threshold": 0.55,
+  "StrictExternal_best_threshold": 0.6383968591690063,
+  "StrictExternal_F1_at_best_threshold": 0.5739514348785871,
+  "strict_rule": "cid_or_canonical",
+  "output_files": {
+    "comparison_all_csv": "/content/drive/MyDrive/Chemoinfo_QT/strict_external_eval_comparison_all.csv",
+    "ranking_csv": "/content/drive/MyDrive/Chemoinfo_QT/strict_external_eval_ranking.csv",
+    "best_predictions_csv": "/content/drive/MyDrive/Chemoinfo_QT/strict_external_best_predictions.csv",
+    "best_confusion_counts_csv": "/content/drive/MyDrive/Chemoinfo_QT/strict_external_best_confusion_counts.csv",
+    "best_roc_png": "/content/drive/MyDrive/Chemoinfo_QT/strict_external_best_roc_curve.png",
+    "best_pr_png": "/content/drive/MyDrive/Chemoinfo_QT/strict_external_best_pr_curve.png",
+    "best_roc_points_csv": "/content/drive/MyDrive/Chemoinfo_QT/strict_external_best_roc_curve_points.csv",
+    "best_pr_points_csv": "/content/drive/MyDrive/Chemoinfo_QT/strict_external_best_pr_curve_points.csv",
+    "strict_overlap_annotation_csv": "/content/drive/MyDrive/Chemoinfo_QT/external_graph_overlap_annotated.csv",
+    "strict_external_csv": "/content/drive/MyDrive/Chemoinfo_QT/external_graph_strict.csv",
+    "strict_external_pt": "/content/drive/MyDrive/Chemoinfo_QT/data_graph_external_strict.pt"
+  }
+}

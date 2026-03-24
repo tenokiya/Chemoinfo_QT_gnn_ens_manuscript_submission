@@ -1,0 +1,5 @@
+dataset,n_rows,n_unique_cid,n_unique_raw_smiles,n_unique_canonical_smiles,n_label_pos,n_label_neg
+internal_compound_curated,6958,6905,6958,6958,766,6192
+internal_graph_augmented,10691,6878,10612,6931,4512,6179
+external_compound_assay,4002,4002,4002,4002,592,3410
+external_graph_graphable,3999,3999,3999,3999,592,3407

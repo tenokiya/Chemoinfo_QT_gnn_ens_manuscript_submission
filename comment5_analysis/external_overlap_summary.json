@@ -1,0 +1,13 @@
+{
+  "strict_overlap_rule": "cid_or_canonical",
+  "external_compound_n": 4002,
+  "external_compound_overlap_cid_n": 2261,
+  "external_compound_overlap_raw_smiles_n": 0,
+  "external_compound_overlap_canonical_smiles_n": 1897,
+  "external_compound_strict_keep_n": 1684,
+  "external_graph_n": 3999,
+  "external_graph_overlap_cid_n": 2259,
+  "external_graph_overlap_raw_smiles_n": 0,
+  "external_graph_overlap_canonical_smiles_n": 1897,
+  "external_graph_strict_keep_n": 1683
+}

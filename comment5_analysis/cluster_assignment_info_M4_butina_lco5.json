@@ -1,0 +1,8 @@
+{
+  "violations": 0,
+  "size_var": 0.16000000000000006,
+  "relax_steps": 7,
+  "min_pos_final": 3,
+  "min_neg_final": 3,
+  "n_unique_canonical_for_clustering": 6931
+}

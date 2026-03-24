@@ -1,0 +1,89 @@
+{
+  "strict_external_csv": "/content/drive/MyDrive/Chemoinfo_QT/strict_external_best_predictions.csv",
+  "group_tag": "CID",
+  "prob_col": "pred_prob",
+  "prob_agg": "mean",
+  "y_agg": "max",
+  "thresholds": {
+    "thr_green": 0.43827567,
+    "thr_red": 0.74526095
+  },
+  "threshold_meta": {
+    "json_path": "/content/drive/MyDrive/Chemoinfo_QT/reports_internal_threshold_search/threshold_targets_internal_CID.json",
+    "recall_key": "Recall_pos_target",
+    "precision_key": "Precision_pos_target_or_fallback",
+    "source": "selected_dict",
+    "thr_green_from": "Recall_pos >= 0.90 with PredPos >= 50",
+    "thr_red_from": "MAX Precision_pos under PredPos >= 50 (fallback; no Precision_pos >= 0.90)"
+  },
+  "tier_summary": [
+    {
+      "tier": "GREEN",
+      "N": 461,
+      "Pos": 25,
+      "Neg": 436,
+      "MeanProb": 0.3367749700433839,
+      "MedianProb": 0.34123433,
+      "MeanInstances": 1.0,
+      "PosRate": 0.05422993492407809
+    },
+    {
+      "tier": "RED",
+      "N": 111,
+      "Pos": 63,
+      "Neg": 48,
+      "MeanProb": 0.7767892809009008,
+      "MedianProb": 0.770731,
+      "MeanInstances": 1.0,
+      "PosRate": 0.5675675675675675
+    },
+    {
+      "tier": "YELLOW",
+      "N": 1111,
+      "Pos": 319,
+      "Neg": 792,
+      "MeanProb": 0.5951285189558956,
+      "MedianProb": 0.5925523,
+      "MeanInstances": 1.0,
+      "PosRate": 0.2871287128712871
+    }
+  ],
+  "kpi": {
+    "RED_only": {
+      "TP": 63,
+      "FP": 48,
+      "TN": 1228,
+      "FN": 344,
+      "Precision_pos": 0.5675675675675675,
+      "Recall_pos": 0.1547911547911548,
+      "Specificity": 0.9623824451410659,
+      "NPV": 0.7811704834605598,
+      "Accuracy": 0.7670825906120023,
+      "F1_pos": 0.24324324324324326,
+      "Definition": "Predict positive = RED only"
+    },
+    "YELLOW_or_RED": {
+      "TP": 382,
+      "FP": 840,
+      "TN": 436,
+      "FN": 25,
+      "Precision_pos": 0.31260229132569556,
+      "Recall_pos": 0.9385749385749386,
+      "Specificity": 0.34169278996865204,
+      "NPV": 0.9457700650759219,
+      "Accuracy": 0.4860368389780155,
+      "F1_pos": 0.468999386126458,
+      "Definition": "Predict positive = (YELLOW or RED)"
+    },
+    "capture": {
+      "Pos_total": 407,
+      "Pos_in_RED": 63,
+      "Pos_in_YELLOW_or_RED": 382,
+      "Capture_RED": 0.1547911547911548,
+      "Capture_YELLOW_or_RED": 0.9385749385749386,
+      "GREEN_Pos": 25,
+      "GREEN_Neg": 436,
+      "GREEN_PosRate": 0.05422993492407809
+    }
+  }
+}
