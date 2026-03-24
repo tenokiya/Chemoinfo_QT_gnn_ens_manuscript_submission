@@ -1,0 +1,56 @@
+{
+  "ROOT": "/content/drive/MyDrive/Chemoinfo_QT",
+  "CSV_used": "/content/drive/MyDrive/Chemoinfo_QT/reports_internal_QT-M2M4-cvpr/predictions_internal_QT-M2M4-cvpr_CIDmean.csv",
+  "CID_level": true,
+  "STRICT": false,
+  "TARGETS": {
+    "Precision_pos": 0.9,
+    "Recall_pos": 0.9
+  },
+  "MIN_PREDPOS": {
+    "Precision": 50,
+    "Recall": 50
+  },
+  "selected": {
+    "Precision_pos_target_or_fallback": {
+      "Threshold": 0.74526095,
+      "N": 6878.0,
+      "Pos": 750.0,
+      "Neg": 6128.0,
+      "TP": 41.0,
+      "FP": 10.0,
+      "TN": 6118.0,
+      "FN": 709.0,
+      "Precision_pos": 0.803921568627451,
+      "Recall_pos": 0.05466666666666667,
+      "F1_pos": 0.10237203495630463,
+      "Specificity": 0.9983681462140992,
+      "Accuracy": 0.8954637976155859,
+      "PredPos": 51.0,
+      "PredNeg": 6827.0,
+      "found": true,
+      "criterion": "MAX Precision_pos under PredPos >= 50 (fallback; no Precision_pos >= 0.90)",
+      "min_predpos": 50
+    },
+    "Recall_pos_target": {
+      "Threshold": 0.43827567,
+      "N": 6878.0,
+      "Pos": 750.0,
+      "Neg": 6128.0,
+      "TP": 675.0,
+      "FP": 1005.0,
+      "TN": 5123.0,
+      "FN": 75.0,
+      "Precision_pos": 0.4017857142857143,
+      "Recall_pos": 0.9,
+      "F1_pos": 0.5555555555555556,
+      "Specificity": 0.8359986945169713,
+      "Accuracy": 0.842977609770282,
+      "PredPos": 1680.0,
+      "PredNeg": 5198.0,
+      "found": true,
+      "criterion": "Recall_pos >= 0.90 with PredPos >= 50",
+      "min_predpos": 50
+    }
+  }
+}
