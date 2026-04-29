@@ -1,0 +1,38 @@
+Drug Safety repository revision summary
+
+Revised snapshot:
+Chemoinfo_QT_gnn_ens_manuscript_submission_DrugSafety_revised.zip
+
+Main changes:
+1. README.md
+   - Replaced the prior manuscript title with:
+     Integrated Molecular Graph Modeling of hERG Assay and Pharmacovigilance Signals for Early Cardiac Safety Prioritization.
+   - Removed prior journal-specific wording.
+   - Reframed repository scope as pharmacovigilance-informed cardiac safety prioritization.
+   - Replaced overly confirmatory external-dataset wording with strict external comparative evaluation where appropriate.
+   - Replaced supplementary-methods wording with Online Resource 1.
+   - Added intended-use and not-intended-use language for ranking/triage interpretation.
+   - Generalized prior response-oriented wording in public README descriptions.
+
+2. comment5_split_similarity_analysis.py
+   - Generalized the public script description to split/similarity audit language.
+   - Did not change executable logic, command-line defaults, thresholds, data handling, or output generation.
+
+3. comment5_analysis/comment5_summary.md
+   - Generalized the title to Split/similarity analysis summary.
+   - Did not change numerical tables or output values.
+
+4. predict_qt_liability.py
+   - Reworded the public-purpose description to research users inspecting compound-level QT-M2M4 prioritization behavior.
+   - Did not change executable logic, thresholds, model loading, or output columns.
+
+5. DrugSafety_repository_revision_note.md
+   - Added a short public note documenting that this repository snapshot was text-reviewed for consistency with the Drug Safety manuscript package.
+
+Items intentionally not changed:
+- Analytical data files
+- Trained model files
+- Numerical outputs
+- Thresholds
+- Model code logic
+- File and directory names such as comment5_analysis/ and comment5_split_similarity_analysis.py, to avoid breaking reproducibility paths and command examples.

@@ -1,4 +1,4 @@
-# Comment 5 analysis summary
+# Split/similarity analysis summary
 
 ## Dataset assembly
 | dataset                   |   n_rows |   n_unique_cid |   n_unique_raw_smiles |   n_unique_canonical_smiles |   n_label_pos |   n_label_neg |
