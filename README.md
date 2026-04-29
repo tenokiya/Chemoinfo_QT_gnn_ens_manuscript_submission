@@ -1,31 +1,31 @@
-# Structure-Based Prioritization of QT Liability for Early Medicinal Chemistry Using an Ensemble Molecular Graph Model
+# Integrated Molecular Graph Modeling of hERG Assay and Pharmacovigilance Signals for Early Cardiac Safety Prioritization
 
-This repository contains the code, processed datasets, trained model files, revision scripts, and selected output files associated with the manuscript:
+This repository contains the code, processed datasets, trained model files, manuscript-supporting analysis scripts, and selected output files associated with the manuscript:
 
 **Tomoyuki Enokiya, Takamasa Yamaguchi**  
-**Structure-Based Prioritization of QT Liability for Early Medicinal Chemistry Using an Ensemble Molecular Graph Model**
+**Integrated Molecular Graph Modeling of hERG Assay and Pharmacovigilance Signals for Early Cardiac Safety Prioritization**
 
 ## Overview
 
-Drug-induced QT prolongation is an important safety and developability liability in medicinal chemistry. This repository supports reproducibility and practical inspection of a structure-based workflow for early QT-liability prioritization using an ensemble molecular graph model.
+Drug-induced QT prolongation remains an important cardiac safety concern in drug development and post-marketing pharmacovigilance. This repository supports reproducibility and practical inspection of a pharmacovigilance-informed molecular graph modeling workflow for early cardiac safety prioritization.
 
 The repository is intended to help readers:
 
 1. inspect the curated internal and external datasets used in model development and evaluation;
 2. review the notebook-based graph-model workflow used for dataset preparation, model training, and manuscript-related analyses;
 3. access trained model weights and representative output files;
-4. reproduce strict external evaluation, split/similarity analyses, and fixed-threshold three-level triage; and
-5. understand how the repository maps to the manuscript, supplementary methods, and revision package.
+4. reproduce the strict external comparative evaluation, split/similarity analyses, and fixed-threshold three-level triage; and
+5. understand how the repository maps to the manuscript and Online Resource 1.
 
-This repository is provided for research and reproducibility purposes. It is **not** intended for clinical decision-making.
+This repository is provided for research and reproducibility purposes. The model output should be interpreted as a ranking or triage score, not as a definitive prediction of clinical QT prolongation or torsade de pointes risk. The framework is **not** intended to replace experimental hERG testing, clinical ECG evaluation, exposure assessment, regulatory safety evaluation, expert pharmacovigilance review, or clinical decision-making.
 
 ---
 
-## Scope of the current revision package
+## Scope of the Drug Safety submission package
 
-The current manuscript revision emphasizes **early medicinal-chemistry decision support**, **compound-level evaluation**, and **strict external validation**.
+The current manuscript package emphasizes **pharmacovigilance-informed cardiac safety prioritization**, **compound-level evaluation**, and **strict external comparative evaluation**.
 
-In the revised workflow:
+In this workflow:
 
 - internal performance is summarized at the **PubChem CID level** to better reflect compound-level screening use;
 - the main external analysis is based on a **strict compound-disjoint subset** derived from PubChem BioAssay **AID 588834** after excluding compounds overlapping the internal dataset by **CID or canonical SMILES**;
@@ -33,7 +33,7 @@ In the revised workflow:
 - a binary operating threshold fixed from internal CID-level analysis (**0.55**) is used for the main strict external binary evaluation; and
 - two internally fixed thresholds (approximately **0.44** and **0.75**) are used for three-level triage (**GREEN / YELLOW / RED**).
 
-For the revised manuscript, the reported strict external performance of QT-M2M4 is **ROC-AUC 0.80** and **PR-AUC 0.51**.
+For the Drug Safety manuscript, the reported strict external comparative performance of QT-M2M4 is **ROC-AUC 0.80** and **PR-AUC 0.51**. These values should be interpreted as external performance characterization in a compound-disjoint assay subset, not as prospective clinical validation.
 
 ---
 
@@ -48,15 +48,15 @@ jupyter notebook qt_liability_gnn_workflow_v2_clean.ipynb
 
 Use this notebook to inspect the main workflow for dataset preparation, graph construction, model training, internal evaluation, and manuscript-related output generation.
 
-### Option B. Reproduce the strict external analyses used in the revision
+### Option B. Reproduce the strict external analyses used in the manuscript package
 
-Run the strict external evaluation script:
+Run the strict external comparative-evaluation script:
 
 ```bash
 python strict_external_eval_full_thr055_fig2layout.py
 ```
 
-Run the split/similarity audit used to address the editor's comment on set assembly and relatedness:
+Run the split/similarity audit used to document set assembly and chemical relatedness:
 
 ```bash
 python comment5_split_similarity_analysis.py
@@ -68,7 +68,7 @@ Run the fixed-threshold triage analysis on the strict external set:
 python triage_external_strict_sim_fixed_thresholds.py
 ```
 
-These scripts were prepared to support the revised European Journal of Medicinal Chemistry submission and should be interpreted together with the manuscript and supplementary methods.
+These scripts support the Drug Safety manuscript package and should be interpreted together with the manuscript and Online Resource 1.
 
 ---
 
@@ -91,7 +91,7 @@ Representative tabular files currently included in this repository:
 - `data_graph_external_index.csv`
 - `external_graph_strict.csv`
 
-These files contain curated source-derived tables and graph index files used in model development, original external assembly, and strict external evaluation.
+These files contain curated source-derived tables and graph index files used in model development, original external assembly, and strict external comparative evaluation.
 
 ### 3. Graph-ready data objects
 
@@ -99,15 +99,15 @@ These files contain curated source-derived tables and graph index files used in 
 - `data_graph_external.pt`
 - `data_graph_external_strict.pt`
 
-These files contain graph-formatted data objects used by the graph-model workflow and the revised strict external analyses.
+These files contain graph-formatted data objects used by the graph-model workflow and the strict external analyses.
 
-### 4. Revision scripts for the current EJMC resubmission
+### 4. Manuscript-supporting analysis scripts
 
 - `comment5_split_similarity_analysis.py`  
-  Split-audit and chemical-relatedness script used to summarize dataset assembly, nearest-neighbor Tanimoto similarity, overlap checks, and scaffold-level relatedness for the revised submission.
+  Split-audit and chemical-relatedness script used to summarize dataset assembly, nearest-neighbor Tanimoto similarity, overlap checks, and scaffold-level relatedness for the manuscript package.
 
 - `strict_external_eval_full_thr055_fig2layout.py`  
-  Main strict external evaluation script used to construct the strict external subset, evaluate candidate ensembles, and generate the strict external ROC/PR/confusion outputs aligned with the revised manuscript.
+  Main strict external comparative-evaluation script used to construct the strict external subset, evaluate candidate ensembles, and generate strict external ROC/PR/confusion outputs aligned with the manuscript.
 
 - `triage_external_strict_sim_fixed_thresholds.py`  
   Fixed-threshold triage script used to apply the internally selected GREEN/RED boundaries to the strict external predictions.
@@ -132,7 +132,7 @@ Representative strict external outputs currently include:
 - `strict_external_eval_ranking.csv`
 - `reports_triage_external_strict_fixed/`
 
-These files summarize the revised strict external evaluation and the fixed-threshold three-level triage used in the manuscript revision.
+These files summarize the strict external comparative evaluation and the fixed-threshold three-level triage used in the manuscript.
 
 ### 7. Figure outputs
 
@@ -236,7 +236,7 @@ The workflow was developed primarily in a notebook-oriented environment. Dependi
 
 This repository contains processed datasets and source-derived files used in the manuscript. Some original data sources may have their own redistribution policies.
 
-The revised submission distinguishes the following dataset roles:
+The Drug Safety manuscript package distinguishes the following dataset roles:
 
 - **Internal development dataset**: integrated from PubChem BioAssay **AID 1671200** and FAERS-derived QT-risk signals.
 - **Original external dataset**: derived from PubChem BioAssay **AID 588834** using the same parent-structure and graph-construction logic.
@@ -246,7 +246,7 @@ The FAERS-derived signal-positive component of the internal development dataset 
 
 In the command-line helper, this curated FAERS-derived positive component is supplied to the `merge-internal` task as the auxiliary positive input via `--aux_positive_csv aux_positive_table.csv`.
 
-Details of dataset curation, label definition, parent-structure consolidation, redistribution context, and strict external subset construction are described in the manuscript and supplementary methods.
+Details of dataset curation, label definition, parent-structure consolidation, redistribution context, and strict external subset construction are described in the manuscript and Online Resource 1.
 
 ---
 
@@ -268,7 +268,7 @@ This notebook contains the main procedures for:
 - generating manuscript-related outputs, and
 - reviewing representative internal and external evaluation results.
 
-### Workflow 2. Strict external evaluation used in the revised manuscript
+### Workflow 2. Strict external comparative evaluation used in the manuscript
 
 Run:
 
@@ -281,10 +281,10 @@ This script is used to:
 - reconstruct the strict external subset,
 - create strict external graph objects,
 - evaluate candidate ensemble combinations,
-- summarize the best-performing ensemble on the strict external set, and
-- generate revised strict external ROC/PR/confusion outputs.
+- summarize QT-M2M4 and candidate ensemble performance on the strict external set, and
+- generate strict external ROC/PR/confusion outputs.
 
-### Workflow 3. Split and similarity audit for Comment 5
+### Workflow 3. Split and similarity audit
 
 Run:
 
@@ -298,7 +298,7 @@ This script is used to:
 - summarize overlap relationships between internal and external sets,
 - compute nearest-neighbor Tanimoto similarity summaries,
 - summarize scaffold-level relatedness, and
-- generate outputs used to support the revised response to the editor's comment on set assembly and similarity.
+- generate outputs used to document set assembly and chemical-relatedness analyses.
 
 ### Workflow 4. Fixed-threshold triage on the strict external set
 
@@ -312,7 +312,7 @@ This script is used to:
 
 - apply internally selected fixed thresholds to the strict external predictions,
 - assign compounds to GREEN / YELLOW / RED triage categories, and
-- summarize three-level prioritization results for the revised manuscript.
+- summarize three-level prioritization results for the manuscript.
 
 ---
 
@@ -324,10 +324,10 @@ The repository files broadly map to the manuscript as follows:
   Support the model-development and evaluation procedures described in the Methods.
 
 - **`reports_internal_QT-M2M4-cvpr/`**  
-  Supports the internal CID-level QT-M2M4 results described in the revised manuscript.
+  Supports the internal CID-level QT-M2M4 results described in the manuscript.
 
 - **Strict external outputs (`strict_external_best_*.csv/json`, `strict_external_eval_*.csv`)**  
-  Support the strict external binary evaluation and ensemble-comparison results.
+  Support the strict external binary comparative evaluation and ensemble-comparison results.
 
 - **`reports_triage_external_strict_fixed/`**  
   Supports the strict external three-level triage analyses.
@@ -341,7 +341,7 @@ The repository files broadly map to the manuscript as follows:
 
 A public interactive demonstration is available separately via Hugging Face Spaces. That demo is intended for rapid qualitative inspection of the model behavior.
 
-This GitHub repository serves a different role: it provides the manuscript-linked reproducibility resources, including workflow code, processed datasets, trained weights, revision scripts, and representative strict external outputs.
+This GitHub repository serves a different role: it provides the manuscript-linked reproducibility resources, including workflow code, processed datasets, trained weights, manuscript-supporting analysis scripts, and representative strict external outputs.
 
 
 ## Apply QT-M2M4 to your own compounds
@@ -430,7 +430,7 @@ Representative outputs:
 - `merged_for_model_consolidated.csv`
 - `merged_for_model_audit.json`
 
-Practical note. In the revised manuscript package, the auxiliary positive input corresponds to the study-ready FAERS-derived signal-positive component generated in the project-specific R-based pharmacovigilance workflow described above. The helper script documents how that curated input is merged and propagated into the model-ready internal tables.
+Practical note. In the Drug Safety manuscript package, the auxiliary positive input corresponds to the study-ready FAERS-derived signal-positive component generated in the project-specific R-based pharmacovigilance workflow described in the manuscript and Online Resource 1. The helper script documents how that curated input is merged and propagated into the model-ready internal tables.
 
 ### 3) Convert the consolidated internal table into a graph-index CSV
 
@@ -475,9 +475,9 @@ python prepare_model_ready_datasets.py build-external \
   --root .
 ```
 
-### 5) Build the strict compound-disjoint external subset used in the revised manuscript
+### 5) Build the strict compound-disjoint external subset used in the manuscript
 
-After the original external graph-index file is available, the revised strict-external evaluation pipeline can be run with:
+After the original external graph-index file is available, the strict-external comparative-evaluation pipeline can be run with:
 
 ```bash
 python strict_external_eval_full_thr055_fig2layout.py
@@ -492,9 +492,11 @@ The command-line helper is provided to make the data-formatting steps more expli
 
 ## Citation
 
-Associated manuscript currently under revision at the **European Journal of Medicinal Chemistry**.
+Associated manuscript:
 
-If this repository is updated after acceptance, citation details will be revised accordingly.
+Tomoyuki Enokiya, Takamasa Yamaguchi. Integrated Molecular Graph Modeling of hERG Assay and Pharmacovigilance Signals for Early Cardiac Safety Prioritization.
+
+If this repository is updated after acceptance, bibliographic citation details will be revised accordingly.
 
 ---
 
