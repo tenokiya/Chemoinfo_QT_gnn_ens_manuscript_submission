@@ -4,7 +4,7 @@ Apply the QT-M2M4 ensemble model to user-supplied compounds.
 
 Purpose
 -------
-This script provides a simple inference entry point for medicinal-chemistry users.
+This script provides a simple inference entry point for research users who wish to inspect compound-level QT-M2M4 prioritization behavior.
 It reads a CSV containing SMILES, constructs graph objects using the same feature
 scheme used in the manuscript workflow, loads the trained M2 and M4 family models,
 and writes ensemble predictions with the fixed manuscript thresholds.

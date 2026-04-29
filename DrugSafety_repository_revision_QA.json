@@ -1,0 +1,184 @@
+{
+  "checked_patterns": [
+    "European Journal",
+    "EJMC",
+    "medicinal chemistry",
+    "medicinal-chemistry",
+    "Comment 5",
+    "editor",
+    "under revision",
+    "strict external validation"
+  ],
+  "remaining_hits_count": 28,
+  "remaining_hits": [
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 3,
+      "pattern": "European Journal",
+      "text": "    \"European Journal\","
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 17,
+      "pattern": "European Journal",
+      "text": "      \"pattern\": \"European Journal\","
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 18,
+      "pattern": "European Journal",
+      "text": "      \"text\": \"   - Removed prior journal-specific wording, including European Journal of Medicinal Chemistry / EJMC references.\""
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 24,
+      "pattern": "European Journal",
+      "text": "      \"text\": \"   - Removed prior journal-specific wording, including European Journal of Medicinal Chemistry / EJMC references.\""
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 4,
+      "pattern": "EJMC",
+      "text": "    \"EJMC\","
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 18,
+      "pattern": "EJMC",
+      "text": "      \"text\": \"   - Removed prior journal-specific wording, including European Journal of Medicinal Chemistry / EJMC references.\""
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 23,
+      "pattern": "EJMC",
+      "text": "      \"pattern\": \"EJMC\","
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 24,
+      "pattern": "EJMC",
+      "text": "      \"text\": \"   - Removed prior journal-specific wording, including European Journal of Medicinal Chemistry / EJMC references.\""
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 5,
+      "pattern": "medicinal chemistry",
+      "text": "    \"medicinal chemistry\","
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 6,
+      "pattern": "medicinal-chemistry",
+      "text": "    \"medicinal-chemistry\","
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 29,
+      "pattern": "medicinal-chemistry",
+      "text": "      \"pattern\": \"medicinal-chemistry\","
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 30,
+      "pattern": "medicinal-chemistry",
+      "text": "      \"text\": \"   - Reworded the public-purpose description from medicinal-chemistry users to research users inspecting compound-level QT-M2M4 prioritization behavior.\""
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 7,
+      "pattern": "Comment 5",
+      "text": "    \"Comment 5\","
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 35,
+      "pattern": "Comment 5",
+      "text": "      \"pattern\": \"Comment 5\","
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 36,
+      "pattern": "Comment 5",
+      "text": "      \"text\": \"   - Removed editor-comment / Comment 5 wording from public README descriptions.\""
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 41,
+      "pattern": "Comment 5",
+      "text": "      \"pattern\": \"Comment 5\","
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 42,
+      "pattern": "Comment 5",
+      "text": "      \"text\": \"   - Generalized public script description from Comment 5 response language to split/similarity audit language.\""
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 47,
+      "pattern": "Comment 5",
+      "text": "      \"pattern\": \"Comment 5\","
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 48,
+      "pattern": "Comment 5",
+      "text": "      \"text\": \"   - Generalized title from Comment 5 analysis summary to Split/similarity analysis summary.\""
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 54,
+      "pattern": "Comment 5",
+      "text": "      \"text\": \"   - Removed editor-comment / Comment 5 wording from public README descriptions.\""
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 8,
+      "pattern": "editor",
+      "text": "    \"editor\","
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 36,
+      "pattern": "editor",
+      "text": "      \"text\": \"   - Removed editor-comment / Comment 5 wording from public README descriptions.\""
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 53,
+      "pattern": "editor",
+      "text": "      \"pattern\": \"editor\","
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 54,
+      "pattern": "editor",
+      "text": "      \"text\": \"   - Removed editor-comment / Comment 5 wording from public README descriptions.\""
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 9,
+      "pattern": "under revision",
+      "text": "    \"under revision\","
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 10,
+      "pattern": "strict external validation",
+      "text": "    \"strict external validation\""
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 59,
+      "pattern": "strict external validation",
+      "text": "      \"pattern\": \"strict external validation\","
+    },
+    {
+      "file": "DrugSafety_repository_revision_QA.json",
+      "line": 60,
+      "pattern": "strict external validation",
+      "text": "      \"text\": \"   - Replaced strict external validation wording with strict external comparative evaluation where appropriate.\""
+    }
+  ],
+  "note": "CSV, binary/model/image files, and notebooks were excluded from this public-text scan."
+}

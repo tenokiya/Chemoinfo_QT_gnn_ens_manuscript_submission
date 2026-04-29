@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Comment 5 (training/test assembly and similarity) analysis script for Chemoinfo_QT.
+Split/similarity analysis script for the QT-M2M4 manuscript-supporting package.
 
 What this script does
 ---------------------
@@ -18,7 +18,7 @@ Notes
 - This script does NOT retrain or re-infer models. For the strict external set, it filters the
   already generated external prediction CSV to compounds retained after strict overlap removal.
 - The script is intentionally conservative and explicit, so the output files can be cited in the
-  manuscript / supplementary information / response letter.
+  manuscript / Online Resource 1 / repository documentation.
 """
 
 from __future__ import annotations
@@ -66,7 +66,7 @@ class Paths:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Comment 5 split/similarity analysis")
+    parser = argparse.ArgumentParser(description="Split/similarity analysis")
     parser.add_argument("--root", type=str, default=".", help="Chemoinfo_QT project root")
     parser.add_argument("--output_dir", type=str, default="comment5_analysis", help="Output directory")
     parser.add_argument("--internal_compound_csv", type=str, default="merged_for_model_consolidated.csv")
@@ -1089,7 +1089,7 @@ def main() -> None:
 
     # ---------- markdown summary ----------
     md_lines = []
-    md_lines.append("# Comment 5 analysis summary")
+    md_lines.append("# Split/similarity analysis summary")
     md_lines.append("")
     md_lines.append("## Dataset assembly")
     md_lines.append(dataset_summary.to_markdown(index=False))
